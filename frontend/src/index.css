@@ -19,10 +19,22 @@
   --color-toaster-bg-light: oklch(.98 .01 200);
   --color-toaster-bg-dark: oklch(.02 .01 200);
 
-  --gradient-shadow: linear-grdient(
+  --gradient-shadow: linear-gradient(
     90deg,
     oklch(50% 0.15 276),
     oklch(.5 0.244 30 / .5)
+  );
+
+  --gradient-header-light: linear-gradient(
+    90deg,
+    oklch(95% 0.02 220 / 0.4),
+    oklch(85% 0.06 260 / 0.4)
+  );
+
+  --gradient-header-dark: linear-gradient(
+    90deg,
+    oklch(28% 0.08 240 / 0.7),
+    oklch(38% 0.1 280 / 0.7)
   );
 
   @keyframes slide-from-left {
@@ -83,6 +95,24 @@ input {
 
 .menu-path {
   transition: d 0.3s ease-in-out;
+}
+
+.header-gradient {
+  background: linear-gradient(
+    90deg,
+    oklch(95% 0.02 220 / 0.4),
+    oklch(85% 0.06 260 / 0.4)
+  ) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header-gradient {
+    background: linear-gradient(
+      90deg,
+      oklch(28% 0.08 240 / 0.7),
+      oklch(38% 0.1 280 / 0.7)
+    ) !important;
+  }
 }
 
 .homepage-section {

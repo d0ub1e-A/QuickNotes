@@ -41,11 +41,14 @@ export default function UserSectionHeader() {
 
   return (
     <div
-      className={`flex relative z-60 justify-between items-center px-4 py-4 md:py-2 bg-gradient-to-r from-purple-mid/30 to-purple-600`}
+      className={`flex relative z-60 justify-between items-center px-4 py-4 md:py-2 backdrop-blur-md header-gradient`}
     >
       {/* Logo and name section */}
-      <Link to={`/me/notes`}>
+      <Link to={`/me/notes`} className={`flex items-center`}>
         <img className={`w-[5rem] h-[5rem]`} src="/LogoQuickNotes.png" />
+        <h1 className="text-3xl text-transparent font-bold font-[roboto] bg-gradient-to-tr from-grey-lite to-purple-lite/30 brightness-150 bg-clip-text">
+            Quick Notes
+          </h1>
       </Link>
 
       {/* Search bar and profile section */}
@@ -64,7 +67,7 @@ export default function UserSectionHeader() {
 
           {/* tag menu */}
           <div
-            className={`absolute w-[20rem] -bottom-[11.5rem] rounded-[15px] flex flex-col transition-all ${
+            className={`absolute w-[20rem] -bottom-[13.5rem] rounded-[15px] flex flex-col transition-all ${
               showTagMenu && tagArray.length > 0
                 ? "max-h-[20rem] z-50 py-[1.2rem] tag-menu"
                 : "max-h-0 z-0 border-0"
@@ -95,7 +98,7 @@ export default function UserSectionHeader() {
         <button
           onClick={() => navTo("/me")}
           title="Go to profile"
-          className={`flex items-center justify-center text-white text-xl hover:scale-110 transition-all`}
+          className={`flex items-center justify-center text-xl bg-indigo-600 rounded-xl p-3 text-stone-100 hover:brightness-125 transition-all`}
         >
           {userInfo.name}
         </button>
