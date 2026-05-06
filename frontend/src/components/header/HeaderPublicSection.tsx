@@ -26,7 +26,7 @@ export default function PublicSectionHeader() {
       <button onClick={navOrScroll}>
         <div className={`flex items-center`}>
           <img className={`w-[5rem] h-[5rem]`} src="/LogoQuickNotes.png" />
-          <h1 className="text-3xl text-transparent font-bold font-[roboto] bg-linear-to-tr from-grey-lite to-purple-lite/30 brightness-150 bg-clip-text">
+          <h1 className="text-3xl text-transparent font-bold font-[roboto] bg-linear-to-tr from-grey-lite to-purple-lite/30 dark:brightness-150 brightness-50 bg-clip-text">
             Quick Notes
           </h1>
         </div>
